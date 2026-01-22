@@ -1,0 +1,7 @@
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+aiosqlite==0.20.0
+PyPDF2==3.0.1
+langchain-openai==0.2.14
+langchain-core==0.3.28
+python-multipart==0.0.20

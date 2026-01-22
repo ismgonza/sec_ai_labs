@@ -1,0 +1,17 @@
+services:
+  api:
+    build: .
+    container_name: fastapi-container
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./labs_utils/server.py:/app/server.py
+      - ./labs_utils/database.py:/app/database.py
+      - ./labs_utils/ai_analyzer.py:/app/ai_analyzer.py
+      - ./labs_utils/init.sql:/app/init.sql
+      - sqlite-data:/app/data
+
+volumes:
+  sqlite-data:
